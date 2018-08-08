@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+	<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">推荐展示</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse sr-only">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container" style="padding-top:60px">
+      <div class="page-header">
+        <h1>推荐系统展示</h1>
+      </div>
+ 
+	  <form class="form-horizontal">
+	    <div class="form-group">
+		  <label for="inputEmail3" class="col-sm-2 control-label">请输入用户id</label>
+		  <div class="col-sm-10">
+		    <input type="text" class="form-control" id="ipt-uid" placeholder="用户id">
+		  </div>
+		</div>
+
+	    <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">请输入推荐数目</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="ipt-num" placeholder="推荐数目">
+          </div>
+	    </div>
+
+	    <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success" id="btn_get_rec">获取推荐结果</button>
+          </div>
+        </div>
+
+	 </form>
+
+	  <form class="form-horizontal sr-only">
+	    <div class="form-group">
+		  <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+
+          <div class="input-group">
+            <div class="input-group-addon">用户id</div>
+            <input type="text" class="form-control" id="ipt-uid-1" placeholder="输入用户id">
+            <!--<div class="input-group-addon">.00</div>-->
+          </div>
+
+          <div class="input-group">
+            <div class="input-group-addon">推荐数量</div>
+            <input type="text" class="form-control" id="ipt-num-2" placeholder="输入推荐结果条数">
+            <!--<div class="input-group-addon">.00</div>-->
+          </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn_get_rec_2">获取推荐结果</button>
+		<p style="padding-top:10px">推荐结果如下：</p>
+	  </form>
+
+	  <div class="container text-center" style="padding-top:10px" id="show_rec_imgs">
+	  </div>
+	  
+
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/js/demo.js"></script>
+  </body>
+</html>
+

@@ -1,7 +1,7 @@
 # coding = utf-8
 # author = wufeijia
 
-from flask import Flask, request, json
+from flask import Flask, request, json, render_template
 import uuid
 import hashlib
 import random
@@ -28,6 +28,10 @@ def get_cache(key):
         g_cache.pop(key)
         return None
     return item
+
+@app.route('/demo.html')
+def serve_demo():
+    return render_template('demo.html')
 
 @app.route('/get-userids', methods = ['POST', 'GET'])
 def get_old_user():
